@@ -1,0 +1,88 @@
+body {
+    background-color: var(--secondandary_color);
+}
+
+.top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: var(--primary_color);
+    border-bottom: 1px solid var(--secondandary_color);
+}
+
+:root {
+    --primary_color: black;
+    --secondandary_color: white;
+}
+
+.top-nav ul {
+    color: var(--secondandary_color);
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.top-nav li a {
+    text-decoration: none !important;
+    color: var(--secondandary_color);
+}
+
+.top-nav ul li:nth-child(1) {
+    position: absolute;
+    right: 9%;
+}
+
+.top-nav ul li:nth-child(2) {
+    position: absolute;
+    right: 5%;
+}
+
+.top-nav .Logo2 {
+    position: absolute;
+    color: var(--secondandary_color);
+    left: 5%;
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+.login-box {
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    background-color: var(--secondandary_color);
+    top: 20%;
+    left: 20%;
+    border: 1px solid var(--primary_color);
+    display: none;
+}
+
+.login-box .username {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.login-box .password {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.login-box .btn-login {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.image-box {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    background-image: url('../static/image/club-img.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid var(--primary_color);
+    top: 20%;
+}

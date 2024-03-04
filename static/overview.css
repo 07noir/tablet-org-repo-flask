@@ -1,0 +1,415 @@
+    .chart {
+        position: absolute;
+        top: 15%;
+        height: 200px;
+        width: 200px;
+        right: 25px;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .chart {
+            width: 150px;
+            height: 150px;
+            top: 2%;
+            right: 20%;
+        }
+    }
+    
+    .chart1 {
+        position: absolute;
+        bottom: 5%;
+        height: 200px;
+        width: 200px;
+        right: 25px;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .chart1 {
+            width: 150px;
+            height: 150px;
+            bottom: 2%;
+            right: 20%;
+        }
+    }
+    
+     :root {
+        --primary-color: rgb(7, 3, 14) !important;
+        --secondary-color: rgb(247, 247, 247);
+    }
+    
+    .side-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 15%;
+        background-color: var(--primary-color);
+        border-right: 1px solid var(--secondary-color);
+    }
+    
+    .container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-color: var(--primary-color);
+        width: 100%;
+        right: 0;
+    }
+    
+    .table-data {
+        position: absolute;
+        bottom: 2%;
+        left: 48%;
+        transform: translateX(-50%);
+        border: 1px solid var(--secondary-color);
+        width: 55%;
+        background-color: var(--primary-color);
+        height: 30%;
+        border-radius: 10px;
+        overflow-y: auto;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .table-data {
+            width: 48%;
+        }
+    }
+    
+    .table-content {
+        position: absolute;
+        top: 5%;
+        left: 2.5%;
+        border: none;
+        color: var(--secondary-color);
+        width: 95%;
+        height: 30px;
+    }
+    
+    .table-content .line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 95%;
+        height: 2px;
+        background-color: var(--secondary-color);
+    }
+    
+    .total-Org {
+        position: absolute;
+        top: 10%;
+        left: 48%;
+        transform: translateX(-50%);
+        border: 1px solid var(--secondary-color);
+        width: 15%;
+        background: linear-gradient(to bottom left, #06cee18e 0%, var(--primary-color) 28%);
+        height: 20%;
+        border-radius: 10px;
+        color: var(--secondary-color);
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-Org {
+            width: 15%;
+            top: 15%;
+            left: 47.7%;
+        }
+    }
+    
+    .total-arch {
+        position: absolute;
+        top: 10%;
+        left: 68%;
+        transform: translateX(-50%);
+        border: 1px solid var(--secondary-color);
+        width: 15%;
+        background: linear-gradient(to bottom left, #db05058e 0%, var(--primary-color) 28%);
+        height: 20%;
+        border-radius: 10px;
+        color: var(--secondary-color);
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-arch {
+            width: 15%;
+            top: 15%;
+            left: 64.5%;
+        }
+    }
+    
+    .total-stud {
+        position: absolute;
+        top: 10%;
+        left: 28%;
+        transform: translateX(-50%);
+        border: 1px solid var(--secondary-color);
+        width: 15%;
+        background: linear-gradient(to bottom left, #ffff008e 0%, var(--primary-color) 28%);
+        height: 20%;
+        border-radius: 10px;
+        color: var(--secondary-color);
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-stud {
+            width: 15%;
+            top: 15%;
+            left: 31%;
+        }
+    }
+    
+    .total-stud .label-total {
+        position: absolute;
+        width: 40%;
+        height: 15%;
+        left: 28%;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-stud .label-total {
+            bottom: 4%;
+        }
+    }
+    
+    .total-arch .label-arch {
+        position: absolute;
+        width: 40%;
+        height: 15%;
+        left: 28%;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-arch .label-arch {
+            bottom: 4%;
+        }
+    }
+    
+    .total-Org .label-Org {
+        position: absolute;
+        width: 40%;
+        height: 15%;
+        left: 28%;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .total-Org .label-Org {
+            bottom: 4%;
+        }
+    }
+    
+    .container button:hover {
+        background-color: rgb(255, 140, 9);
+    }
+    
+    .side-div .btn-1 {
+        background-color: rgb(255, 140, 9);
+    }
+    
+    .total-stud .btn-label1 {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        top: 10%;
+        left: 0;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border: none;
+        font-size: 20px;
+    }
+    
+    .total-Org .btn-label2 {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        top: 10%;
+        left: 0;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border: none;
+        font-size: 20px;
+    }
+    
+    .total-arch .btn-label3 {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        top: 10%;
+        left: 0;
+        bottom: 20%;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        padding-top: 8px;
+        text-align: center;
+        border: none;
+        font-size: 20px;
+    }
+    
+    .right-div {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 250px;
+        border-left: 1px solid var(--secondary-color);
+    }
+    
+    .right-div h1 {
+        position: absolute;
+        left: 25%;
+        color: var(--secondary-color);
+    }
+    
+    .side-nav button {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav .btn-2 {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav .btn-3 {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav .btn-4 {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav .btn-5 {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav .btn-6 {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        height: 30px;
+        width: 150px;
+        color: var(--secondary-color);
+        border: none;
+        transition: background-color 0.3s;
+        border-radius: 10px;
+    }
+    
+    .side-nav button:hover {
+        background-color: rgb(237, 120, 4);
+    }
+    
+    .side-nav .Logo2 {
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        color: var(--secondary-color);
+        font-size: 25px
+    }
+    
+    .container .hello-stud {
+        position: absolute;
+        left: 20%;
+        top: 0px;
+        color: var(--secondary-color);
+        font-family: Arial, sans-serif;
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        .container .hello-stud {
+            left: 24%;
+        }
+    }
+    
+    .container .org-list {
+        position: absolute;
+        bottom: 40%;
+        left: 48%;
+        transform: translateX(-50%);
+        border: 1px solid var(--secondary-color);
+        width: 55%;
+        background-color: var(--primary-color);
+        height: 25%;
+        border-radius: 10px;
+        overflow-y: auto;
+    }
+    
+    .container .org-list table {
+        position: absolute;
+        width: 96%;
+        left: 2%;
+        top: 3%;
+        color: var(--secondary-color);
+        text-align: left;
+    }

@@ -1,0 +1,250 @@
+        .side-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 15%;
+            background-color: var(--primary-color);
+            border-right: 1px solid var(--secondary-color);
+        }
+        
+        .side-nav button {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav .btn-2 {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav .btn-3 {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav .btn-4 {
+            position: absolute;
+            top: 45%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav .btn-5 {
+            position: absolute;
+            top: 80%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav .btn-6 {
+            position: absolute;
+            top: 55%;
+            left: 10%;
+            height: 30px;
+            width: 150px;
+            color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+        
+        .side-nav button:hover {
+            background-color: rgb(237, 120, 4);
+        }
+        
+        .side-nav .Logo2 {
+            position: absolute;
+            top: 20px;
+            left: 35px;
+            color: var(--secondary-color);
+            font-size: 25px
+        }
+        
+         :root {
+            --primary-color: rgb(6, 6, 6)!important;
+            --secondary-color: rgb(255, 253, 253);
+        }
+        
+        .organization-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            top: 0;
+            left: 0;
+        }
+        
+        .organization-container .org-table-content {
+            position: absolute;
+            top: 15%;
+            left: 17%;
+            width: 80%;
+            height: 80%;
+            background-color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+        }
+        
+        .org-table-content table {
+            left: 2%;
+            position: absolute;
+            width: 95%;
+            color: var(--secondary-color);
+        }
+        
+        .organization-container h1 {
+            position: absolute;
+            left: 20%;
+            top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .organization-container .add-org {
+            position: absolute;
+            top: 5%;
+            right: 8%;
+            width: 150px;
+            height: 40px;
+            background-color: rgb(56, 73, 203);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .organization-container .add-org:hover {
+            background-color: orange;
+        }
+        
+        .org-table-content table .th-line {
+            position: absolute;
+            left: 0;
+            border-bottom: 1px solid var(--secondary-color);
+            width: 100%;
+        }
+        
+        .org-table-content table .td-line {
+            position: absolute;
+            left: 0;
+            border-bottom: 1px solid var(--secondary-color);
+            width: 100%;
+        }
+        
+        .modal {
+            position: absolute;
+            top: 5%;
+            width: 40%;
+            height: 80%;
+            left: 40%;
+            border-radius: 10px;
+            background-color: white;
+            display: none;
+        }
+        
+        .modal .modal-content img {
+            position: absolute;
+            right: 0;
+        }
+        
+        .modal .modal-content label {
+            position: absolute;
+            left: 10%;
+        }
+        
+        .modal .modal-content input {
+            position: absolute;
+            left: 10%;
+            width: 390px;
+            height: 30px;
+        }
+        
+        .modal-content .btn-update {
+            position: absolute;
+            left: 10%;
+            width: 50px;
+            height: 30px;
+            bottom: 10%;
+        }
+        
+        .org-label {
+            position: absolute;
+            top: 5%;
+        }
+        
+        .org-name {
+            position: absolute;
+            top: 10%;
+        }
+        
+        .org-abbv-label {
+            position: absolute;
+            top: 20%;
+        }
+        
+        .org-abbv {
+            position: absolute;
+            top: 25%;
+        }
+        
+        .org-stats-label {
+            position: absolute;
+            top: 35%;
+        }
+        
+        .org-status {
+            position: absolute;
+            top: 40%;
+        }
+        
+        .org-adviser-label {
+            position: absolute;
+            top: 50%;
+        }
+        
+        .org-adviser {
+            position: absolute;
+            top: 55%;
+        }
+        
+        .org-president-label {
+            position: absolute;
+            top: 65%;
+        }
+        
+        .org-president {
+            position: absolute;
+            top: 70%;
+        }
