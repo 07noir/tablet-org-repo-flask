@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='overview.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container" id="overview-container">
+        <h2 class="hello-stud">DASHBOARD</h2>
+        <div class="right-div">
+            <h1>Statistics</h1>
+            <div class=chart>
+                <canvas id="barChart" width="300" height="300"></canvas>
+            </div>
+            <div class=chart1>
+                <canvas id="pieChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+        <div class="org-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 300px;">Organization</th>
+                        <th style="width: 200px;">Status</th>
+                        <th>Abbv</th>
+                    </tr>
+                    <tr>
+                        <td class="th-line" colspan="3"></td>
+                    </tr>
+                    <tbody>
+                        {% for org in organization %}
+                        <tr>
+                            <td style="padding-top: 10px;">{{org[0]}}</td>
+                            <td style="padding-top: 10px;">{{org[1]}}</td>
+                            <td style="padding-top: 10px;">{{org[2]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+
+        </div>
+        <div class="table-data">
+            <table class="table-content">
+                <thead>
+                    <tr style="text-align: left; ">
+                        <th style="width: 300px;">Name</th>
+                        <th style="width:200px">USN</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in student%}
+                    <tr style="height: 30px;">
+                        <td style="padding-top: 10px;">{{i[0]}}</td>
+                        <td style="padding-top: 10px;">{{i[1]}}</td>
+                        <td style="padding-top: 10px;">{{i[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+        <button class="total-stud">
+                <label class="btn-label1">Total Students</label>
+                <label class = "label-total">{{studCount}}</label>
+            </button>
+        <button class="total-Org">
+                <label class="btn-label2">Organizations</label>
+                <label class = "label-Org">{{orgs_count}}</label>
+            </button>
+        <button class="total-arch">
+                <label class="btn-label3">Archieved</label>
+                <label class = "label-arch">600</label>
+            </button>
+    </div>
+    </div>
+
+    <div class="side-nav">
+        <label class="Logo" style="position: absolute;top:20px;left: 15px;color:white;color:rgb(204, 36, 36);font-size: 25px">X</label>
+        <label class="Logo2">Organization</label>
+        <button id="btn-overview" type="submit" style="background-color: rgb(225, 120, 1)">
+            <img src="static/image/overview_icon.png" alt="overview" style="width: 15px; height:15px;position:absolute;left: 15px;top:8px">
+            Overview
+        </button>
+        <a href="/archieved">
+            <button class="btn-2" id="btn-archieved">
+            <img src="static/image/archieve.png" alt="transaction" style="width: 17px; height:17px;position:absolute;left: 15px;top:5 px">
+            Archieved
+        </button>
+        </a>
+
+        <a href="/organizations">
+            <button class="btn-3" id="btn-org" type="submit">
+            <img src="static/image/add-group.png" alt="membership" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Organization
+        </button>
+        </a>
+        <a href="/statistic">
+            <button class="btn-4" id="btn-stats">
+            <img src="static/image/statistics.png" alt="statistics" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Statistics
+        </button>
+        </a>
+        <button class="btn-5" id="btn-logout">
+            <img src="static/image/logout2.png" alt="logout" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Logout
+        </button>
+        <button class="btn-6" id="btn-settings">
+            <img src="static/image/customer-support.png" alt="settings" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Settings
+        </button>
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="static/js/chart.js"></script>
+    <script src="static/js/chart1.js"></script>
+    <script src="static/js/stat_pieChart.js"></script>
+
+
+</body>
+
+</html>

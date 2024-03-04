@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='officer_dashboard.css')}}">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Dashboard</h2>
+    </div>
+
+
+    <div class="side-nav">
+        <label class="Logo" style="position: absolute;top:20px;left: 15px;color:white;color:rgb(204, 36, 36);font-size: 25px">X</label>
+        <label class="Logo2">Organization</label>
+        <a href="/officer_dashboard">
+            <button id="btn-overview" type="submit" style="background-color:rgb(225, 120, 1);">
+            <img src="../static/image/overview_icon.png" alt="officer_dashboard" style="width: 15px; height:15px;position:absolute;left: 15px;top:8px">
+            Dashboard
+        </button>
+        </a>
+
+        <a href="">
+            <button class="btn-2" id="btn-archieved">
+            <img src="../static/image/transaction.png" alt="transaction" style="width: 20px; height:20px;position:absolute;left: 12px;top:5 px">
+            Transaction
+        </button>
+        </a>
+
+        <a href="">
+            <button class="btn-3" id="btn-org" type="submit">
+            <img src="../static/image/add-group.png" alt="membership" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Membership
+        </button>
+        </a>
+        <button class="btn-4" id="btn-stats">
+            <img src="../static/image/statistics.png" alt="statistics" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Statistics
+        </button>
+        <button class="btn-5" id="btn-logout">
+            <img src="../static/image/logout2.png" alt="logout" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Logout
+        </button>
+        <button class="btn-6" id="btn-settings">
+            <img src="../static/image/customer-support.png" alt="settings" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Settings
+        </button>
+
+
+
+    </div>
+
+    <div class="right-nav">
+        <div class="picture-box"></div>
+
+    </div>
+
+</body>
+
+</html>

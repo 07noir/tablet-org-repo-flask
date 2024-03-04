@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='org.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="organization-container" id="org-container">
+        <h1>Oganization</h1>
+        <button class="add-org" type="submit" onclick="modal(1)">Add Club</button>
+        <div class="org-table-content">
+            <table>
+                <thead>
+                    <tr style="text-align: left;">
+                        <th style="width: 300px;">Org Name</th>
+                        <th style="width:100px;">Status</th>
+                        <th style="width:100px;">Abbv</th>
+                        <th style="width:180px;">Adviser</th>
+                        <th style="width:170px;">President</th>
+                        <th style="width: 200px;">Action</th>
+
+                    </tr>
+                    <tr>
+                        <td class="th-line" colspan="3"></td>
+                    </tr>
+                    <tbody>
+                        {% for org in organization %}
+                        <tr>
+                            <td style="padding-top:10px;">{{org[1]}}</td>
+                            <td style="padding-top:10px;">{{org[3]}}</td>
+                            <td style="padding-top:10px;">{{org[2]}}</td>
+                            <td style="padding-top:10px;">{{org[4]}}</td>
+                            <td style="padding-top:10px;">{{org[5]}}</td>
+                            <td style="padding-top:10px;">
+                                <a href=""><img src="../static/image/edit2.png" alt="edit"></a>
+                                <a href="/org_delete/{{org[0]}}" style="padding-left: 5px;"><img src="../static/image/delete2.png" alt="delete" onclick="exit()"></a>
+                                <a href="" style="padding-left: 5px;"><img src="../static/image/hide.png" alt="edit"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-line" colspan="3"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+
+        </div>
+
+        <form action="/add_organization" method="post">
+            <div id="add-modal" class="modal">
+
+                <div class="modal-content">
+                    <img src="../static/image/button.png" alt="button" onclick="modal(2)">
+
+                    <label for="organization" class="org-label">Org Name</label>
+                    <input type="text" id="organization" name="organization" class="org-name"><br>
+
+                    <label for="abbreviation" class="org-abbv-label">Abbreviation</label>
+                    <input type="text" id="abbreviation" name="abbreviation" class="org-abbv"><br>
+
+                    <label for="status" class="org-stats-label">Status</label>
+                    <input type="text" id="status" name="status" class="org-status"><br><br>
+
+                    <label for="adviser" class="org-adviser-label">Adviser</label>
+                    <input type="text" id="adviser" name="adviser" class="org-adviser"><br><br>
+
+                    <label for="president" class="org-president-label">President</label>
+                    <input type="text" id="president" name="president" class="org-president"><br><br>
+
+                    <input type="submit" value="Add" class="btn-update" style="background-color: rgb(22, 189, 22);color:white;border:none">
+
+
+                </div>
+            </div>
+        </form>
+
+        <script>
+            function modal(show) {
+                var add_modal = document.getElementById('add-modal');
+                add_modal.style.display = 'none';
+
+                if (show === 1) {
+                    add_modal.style.display = 'block';
+                } else if (show === 2) {
+                    add_modal.style.display = 'none';
+                }
+            }
+        </script>
+        <script>
+            function exit() {
+                alert('Do you want to delete this?');
+            }
+        </script>
+
+
+
+
+    </div>
+
+
+
+    <div class="side-nav">
+        <label class="Logo" style="position: absolute;top:20px;left: 15px;color:white;color:rgb(204, 36, 36);font-size: 25px">X</label>
+        <label class="Logo2">Organization</label>
+        <a href="/overview">
+            <button id="btn-overview" type="submit">
+            <img src="static/image/overview_icon.png" alt="overview" style="width: 15px; height:15px;position:absolute;left: 15px;top:8px">
+            Overview
+        </button>
+        </a>
+
+        <a href="/archieved">
+            <button class="btn-2" id="btn-archieved">
+            <img src="static/image/archieve.png" alt="transaction" style="width: 17px; height:17px;position:absolute;left: 15px;top:5 px">
+            Archieved
+        </button>
+        </a>
+
+        <button class="btn-3" id="btn-org" type="submit" style="background-color: rgb(225, 120, 1);">
+            <img src="static/image/add-group.png" alt="membership" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Organization
+        </button>
+        <a href="/statistic">
+            <button class="btn-4" id="btn-stats">
+            <img src="static/image/statistics.png" alt="statistics" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Statistics
+        </button>
+        </a>
+        <button class="btn-5" id="btn-logout">
+            <img src="static/image/logout2.png" alt="logout" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Logout
+        </button>
+        <button class="btn-6" id="btn-settings">
+            <img src="static/image/customer-support.png" alt="settings" style="width: 17px; height:17px;position:absolute;left: 15px;top:8px">
+            Settings
+        </button>
+
+
+
+    </div>
+
+</body>
+
+</html>
